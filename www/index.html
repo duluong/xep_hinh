@@ -5,101 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <script src="components/loader.js"></script>
+    <script src="lib/onsen/js/angular/angular.js"></script>
     <script src="lib/onsenui/js/onsenui.min.js"></script>
-
+    
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-
-    <script>
-        ons.ready(function() {
-            console.log("Onsen UI is ready!");
-        });
-        
-        window.fn = {};
-        window.fn.open = function() {
-          var menu = document.getElementById('menu');
-          menu.open();
-        };
-        window.fn.load = function(page) {
-          var content = document.getElementById('content');
-          var menu = document.getElementById('menu');
-          content.load(page)
-            .then(menu.close.bind(menu));
-        };
-          
-    </script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-  <ons-splitter>
-    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-      <ons-page>
-        <ons-list>
-          <ons-list-item onclick="fn.load('home.html')" tappable>
-            Home
-          </ons-list-item>
-          <ons-list-item onclick="fn.load('settings.html')" tappable>
-            Settings
-          </ons-list-item>
-          <ons-list-item onclick="fn.load('about.html')" tappable>
-            About
-          </ons-list-item>
-        </ons-list>
-      </ons-page>
-    </ons-splitter-side>
-    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
-  </ons-splitter>
-  
-  <ons-template id="home.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-toolbar-button onclick="fn.open()">
-            <ons-icon icon="md-menu"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-        <div class="center">
-          Main
-        </div>
-      </ons-toolbar>
-      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-        Chao cac ban
-      </p>
-    </ons-page>
-  </ons-template>
-  
-  <ons-template id="settings.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-toolbar-button onclick="fn.open()">
-            <ons-icon icon="md-menu"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-        <div class="center">
-          Settings
-        </div>
-      </ons-toolbar>
-    </ons-page>
-  </ons-template>
-  
-  <ons-template id="about.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-toolbar-button onclick="fn.open()">
-            <ons-icon icon="md-menu"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-        <div class="center">
-          About
-        </div>
-      </ons-toolbar>
-      <p>
-        <img src="images/img001.jpg" heigh="400px" width="300px" alt="img001.jpg" />
-      </p>
-    </ons-page>
-  </ons-template>
-    
+<ons-page id="welcome-page">
+    <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+    </div>
+  <h1 class="title">App Puzzle Picture</h1>
+<ons-button class="start-game">Start Game</ons-button>
+<ons-row align="bottom" class="footer"><h4>Copyright 2016 Hita Team. All rights reserved.</h4></ons-row>
+</ons-page>
 </body>
 </html>

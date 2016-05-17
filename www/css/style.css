@@ -1,2 +1,62 @@
 /**/
+body{
+    font-family: 'Roboto', sans-serif !important;
+    padding: 10px;
+}
+.page{
+    font-family: 'Roboto', sans-serif;
+    
+}
+#welcome-page .page__background{
+    background: url("../images/bg.jpg");
+    background-size: 100% 100%;
+}
 
+.logo{
+    text-align: center;
+    margin-top: 100px;
+}
+.logo img{
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#welcome-page h1{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+#welcome-page h1.title{
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+#welcome-page .button{
+     font-family: 'Roboto', sans-serif;
+     margin: 0 auto;
+    
+}
+.start-game{
+    display: table;
+    
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    
+}
+.footer h4{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
