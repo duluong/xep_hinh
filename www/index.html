@@ -5,24 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <script src="components/loader.js"></script>
-    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
     <script src="lib/onsenui/js/onsenui.min.js"></script>
-    
+    <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
-    
+    <script>
+        ons.bootstrap()
+          .controller('AppController', function() {
+            
+          });
+        ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });
+    </script>
 </head>
 <body>
-<ons-page id="welcome-page">
+    <ons-page>
+        <ons-navigator
+          var="navi"
+          page="index"
+        </ons-navigator>
+    </ons-page>
+    
+    <ons-template id="index">
+    <ons-page id="welcome-page">
     <div class="logo">
         <img src="images/logo.png" alt="logo" />
     </div>
-  <h1 class="title">App Puzzle Picture</h1>
-<ons-button class="start-game">Start Game</ons-button>
-<ons-row align="bottom" class="footer"><h4>Copyright 2016 Hita Team. All rights reserved.</h4></ons-row>
-</ons-page>
+      <h1 class="title">App Puzzle Picture</h1>
+    <ons-button class="start-game" ng-click="navi.pushPage('page2')">Start Game</ons-button>
+    <ons-row align="bottom" class="footer"><h4>Copyright © 2016 Kenshin Team. All rights reserved.</h4></ons-row>
+    </ons-page>
+    </ons-template>
+
+    <ons-template id="page2">
+      <ons-page class="choose-skill">
+        <section style="padding: 10px">
+        <h1 class="logo2"><img src="images/logo2.png" alt="logo" /></h1>
+        <h3>Choose your skill</h3>
+            <ons-row>
+                <ons-col><ons-button modifier="outline" style="float:right">Very Easy</ons-button></ons-col>
+                <ons-col><ons-button modifier="outline">Easy</ons-button></ons-col>
+            </ons-row>
+            <ons-row>
+                <ons-col><ons-button modifier="outline" style="float:right">Medium</ons-button></ons-col>
+                <ons-col><ons-button modifier="outline">Hard</ons-button></ons-col>
+            </ons-row>
+        </section>
+    </ons-page>
+    </ons-template>
+
 </body>
 </html>

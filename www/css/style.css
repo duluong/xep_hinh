@@ -11,6 +11,10 @@ body{
     background: url("../images/bg.jpg");
     background-size: 100% 100%;
 }
+.choose-skill .page__background{
+    background: rgb(119, 4, 55);
+    background-size: 100% 100%;
+}
 
 .logo{
     text-align: center;
@@ -22,9 +26,9 @@ body{
     margin: 0 auto;
 }
 
-#welcome-page h1{
+#welcome-page h1,.choose-skill h1{
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -33,15 +37,49 @@ body{
     font-weight: 500;
     margin-bottom: 40px;
 }
+.choose-skill h1{
+    color: #fff;
+}
+.choose-skill h3{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+.choose-skill section{
+    margin-top: 50px;
+}
 #welcome-page .button{
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     border-radius: 0;
     background: #26A8DA;
+    font-size: 12px;
     
 }
 .start-game{
     display: table;
+    text-transform: uppercase;
+}
+.choose-skill .button--outline {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.81);
+    color: #fff;
+    width: 100px;
+    margin: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+}
+.choose-skill .button--outline:hover{
+     border: 1px solid #ccc;
+}
+.button--outline:hover {
+    border: 1px solid rgba(255, 255, 255, 0.81);
+}
+
+.choose-skill{
+    vertical-align: middle;
 }
 .footer{
     position: absolute;
